@@ -55,7 +55,7 @@ public class ClienteController {
 		cEnBD.setNombre(c.getNombre());
 		cEnBD.setTelefono(c.getTelefono());
 		cEnBD.setDireccion(c.getDireccion());
-		cEnBD.setCorreo(c.getCorreo());
+		cEnBD.setCiudad(c.getCiudad());
 		
 		return clienteService.save(cEnBD);
 	}

@@ -52,11 +52,15 @@ public class PedidoController {
 		Pedido pEnBD= pedidoService.findById(id).get();
 		
 		pEnBD.setCodigo(p.getCodigo());
-		pEnBD.setNombre(p.getNombre());
-		pEnBD.setValor(p.getValor());
+		pEnBD.setCliente(p.getCliente());
+		pEnBD.setTelefono(p.getTelefono());
+		pEnBD.setProducto(p.getProducto());
 		pEnBD.setDetalles(p.getDetalles());
+		pEnBD.setfAprox(p.getfAprox());
 		pEnBD.setfPed(p.getfPed());
 		pEnBD.setfEnv(p.getfEnv());
+		pEnBD.setValorAprox(p.getValorAprox());
+		pEnBD.setValor(p.getValor());
 		
 
 		

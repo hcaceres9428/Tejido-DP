@@ -24,11 +24,11 @@ public class Cliente {
 	
 	private String nombre;
 	
-	private int telefono;
+	private Long telefono;
 	
 	private String direccion;
 	
-	private String correo;
+	private String ciudad;
 	
 	@ManyToMany(cascade = {
             CascadeType.PERSIST,
@@ -47,13 +47,13 @@ public class Cliente {
 	}
 
 
-	public Cliente(int codigo, String nombre, int telefono, String direccion, String correo, Set<Pedido> pedidos) {
+	public Cliente(int codigo, String nombre, Long telefono, String direccion, String ciudad, Set<Pedido> pedidos) {
 		
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.telefono = telefono;
 		this.direccion = direccion;
-		this.correo = correo;
+		this.ciudad = ciudad;
 		this.pedidos = pedidos;
 	}
 
@@ -78,12 +78,12 @@ public class Cliente {
 	}
 
 
-	public int getTelefono() {
+	public long getTelefono() {
 		return telefono;
 	}
 
 
-	public void setTelefono(int telefono) {
+	public void setTelefono(Long telefono) {
 		this.telefono = telefono;
 	}
 
@@ -98,13 +98,13 @@ public class Cliente {
 	}
 
 
-	public String getCorreo() {
-		return correo;
+	public String getCiudad() {
+		return ciudad;
 	}
 
 
-	public void setCorreo(String correo) {
-		this.correo = correo;
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
 	}
 
 
