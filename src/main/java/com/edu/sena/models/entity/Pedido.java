@@ -25,7 +25,7 @@ public class Pedido {
 	
 	private String cliente;
 	
-	private int telefono;
+	private Long telefono;
 	
 	private String producto;
 	
@@ -58,7 +58,7 @@ public class Pedido {
 
 	
 
-	public Pedido(int codigo, String cliente, int telefono, String producto, double valorAprox, double valor,
+	public Pedido(int codigo, String cliente, Long telefono, String producto, double valorAprox, double valor,
 			String detalles, Date fPed, Date fAprox, Date fEnv, Set<Cliente> clientes) {
 		
 		this.codigo = codigo;
@@ -76,13 +76,16 @@ public class Pedido {
 
 
 
-	public int getTelefono() {
+	public Long getTelefono() {
 		return telefono;
 	}
 
-	public void setTelefono(int telefono) {
+
+
+	public void setTelefono(Long telefono) {
 		this.telefono = telefono;
 	}
+
 
 	public String getProducto() {
 		return producto;
